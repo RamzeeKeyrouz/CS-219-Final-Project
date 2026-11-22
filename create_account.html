@@ -1,1 +1,38 @@
+<!DOCTYPE html>
 
+<html>
+
+<head>
+    <form action="create_account.html" method="post">
+
+    <div>
+        Full Name
+    </div>
+    <div>
+        <input type="text" placeholder="Bob Smith" id="createAccountFullName" required>
+    </div>
+
+    <div>
+        Email Adress
+    </div>
+    <div>
+        <input type = "email" placeholder = "bob@example.com" id="createAccountEmail" required>
+    </div>
+
+    <div>
+        Password
+    </div>
+    <div>
+        <input type = "password" placeholder = "At least 12 characters" id="createAccountPassword" required>
+    </div>
+
+    <button type="submit" onclick="window.location.href='sign_in.html'">Create Account</button>
+
+    </form>
+
+    <body>
+        Already have an account? <a href="sign_in.html">Sign In</a>
+    </body>
+</head>
+
+</html>
