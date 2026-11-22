@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <form action = "reset_link_sent.html" method = "post">
         <h4>Check your email</h4>
        <h1>Reset Link Sent</h1> 
-       <p>If an account exists for _______, you will receive a password reset link shortly.</p>
-    </head>
+       <p>If an account exists for <var>email</var>, you will receive a password reset link shortly.</p>
+       <button type = "button" onclick = "location.href = 'sign_in.html'">Back to Sign In</button>
+    </form>
+    <script>
+        function receiveEmail(){
+            var email = sessionStorage.getItem("email");
+        }
+    </script>
+</html>
