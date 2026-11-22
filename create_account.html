@@ -9,24 +9,26 @@
         Full Name
     </div>
     <div>
-        <input type="text" placeholder="Bob Smith" id="createAccountFullName" required>
+        <input type="text" placeholder="Bob Smith" id="createAccountFullName">
     </div>
 
     <div>
         Email Adress
     </div>
     <div>
-        <input type = "email" placeholder = "bob@example.com" id="createAccountEmail" required>
+        <input type = "email" placeholder = "bob@example.com" id="createAccountEmail">
     </div>
 
     <div>
         Password
     </div>
     <div>
-        <input type = "password" placeholder = "At least 12 characters" id="createAccountPassword" required>
+        <input type = "password" placeholder = "At least 6 characters" id="createAccountPassword">
     </div>
 
     <button type="submit">Create Account</button>
+
+    <p id="errorMessage"></p>
 
     </form>
 
@@ -45,18 +47,35 @@
 
     form.addEventListener("submit", function (event) {
 
-        errorMessage.textContent = "";
-
+        //make sure all text boxes are filled in
         if (
             fullName.value.trim() === "" ||
             email.value.trim() === "" ||
-                password.value.trim() === ""
+            password.value.trim() === ""
             ) {
                 event.preventDefault();
-                errorMessage.textContent = "Please fill in all fields.";
+                errorMessage.textContent = "Please fill in all boxes.";
                 return;
             }
+
+        //validate email
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/;
+
+        if (!emailPattern.test(email.value.trim())) {
+            event.preventDefault();
+            errorMessage.textContent = "Please enter a valid email address.";
+            return;
+        }
+
+        //validate password length
+        if (password.value.trim().length < 6) {
+            event.preventDefault();
+            errorMessage.textContent = "Password must be at least 6 characters long.";
+            return;
+        }
+
         });
+
     </script>
 </body>
 
