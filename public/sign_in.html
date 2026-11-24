@@ -63,7 +63,7 @@ form.addEventListener("submit", async function(event) {
         window.location.href = result.redirect;
 
         //make sure all text boxes are filled in
-        else if (
+        if (
             email.value.trim() === "" ||
             password.value.trim() === ""
             ) {
