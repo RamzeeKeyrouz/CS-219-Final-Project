@@ -1,0 +1,28 @@
+{
+  "name": "cs-219-final-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RamzeeKeyrouz/CS-219-Final-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RamzeeKeyrouz/CS-219-Final-Project/issues"
+  },
+  "homepage": "https://github.com/RamzeeKeyrouz/CS-219-Final-Project#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mongoose": "^9.13.0"
+  }
+}
