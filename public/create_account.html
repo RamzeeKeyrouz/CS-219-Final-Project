@@ -26,7 +26,7 @@
         <input type = "password" placeholder = "At least 6 characters" id="createAccountPassword">
     </div>
 
-    <button type="submit">Create Account</button>
+    <button type="submit" onclick="location.href = 'dashboard.html'">Create Account</button>
 
     <p id="errorMessage"></p>
 
@@ -72,6 +72,12 @@
             event.preventDefault();
             errorMessage.textContent = "Password must be at least 6 characters long.";
             return;
+        }
+        
+        // If all of the validations pass, then it will go to the dashboard page
+        if (emailPattern.test(email.value.trim()) && password.value.trim().length >= 6){
+            event.preventDefault();
+            location.href = 'dashboard.html';
         }
 
         });

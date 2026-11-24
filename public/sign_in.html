@@ -18,7 +18,7 @@
 <div>
     <p id="errorMessage"></p>
 </div>
-    <button type = "submit" >Sign In</button>
+    <button type = "submit">Sign In</button>
 
     </form>
 
@@ -59,6 +59,11 @@
             event.preventDefault();
             errorMessage.textContent = "Please fill in all boxes.";
             }
+        else {
+            event.preventDefault();
+            errorMessage.textContent = "Conditions are met.";
+            location.href = 'dashboard.html';
+        }
 
         });
     
